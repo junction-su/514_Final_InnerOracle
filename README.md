@@ -34,5 +34,4 @@ The device operates on a closed-loop system where biometric input directly drive
 ### Data Flow Diagram
 `[User Hand] --> [GSR Sensor] --(Analog Signal)--> [XIAO ESP32C3] --(I2C/GPIO)--> [OLED & Motor]`
 
-![System Diagram](README_Img/system_diagram.jpg)
-*(Note: Don't forget! You need to draw a simple box diagram (boxes and arrows) separately and upload it here. The sketch doesn't cover this part.)*
+![System Diagram](README_Img/system_diagram.png)
