@@ -3,8 +3,7 @@
 ## 1. Project Overview
 **The Inner Oracle** is an interactive fortune-telling machine that combines biometric data with Tarot symbolism. Instead of relying on pure chance, it measures the user's physiological state (skin conductance) to generate a personalized reading. By placing a hand on the sensing orb, the user triggers a mechanical dial that points to a Tarot card, while an OLED screen displays a cryptic message tailored to their inner condition.
 
-![Concept Sketch](https://github.com/SuHyun/Final_Project/blob/main/images/concept_sketch.jpg)
-*(Note: Upload your 'Inner Oracle' sketch from page 2 of your PDF here)*
+![Concept Sketch](README_Img/sketch.png)
 
 
 
