@@ -4,3 +4,6 @@
 - SSD1306(OLED) : https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf
 - Grove - GSR Sensor (Seeed Studio) : https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Sensor_WiKi.pdf
 - ESP32-C3 : https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf
+- Li-Po Battery : https://cdn-shop.adafruit.com/product-files/1578/Datasheet.pdf
+- Push Button(Tactile_Button_6mm) : https://cdn-shop.adafruit.com/datasheets/B3F-1000-Omron.pdf
+- WS2812B(LED) : https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf
