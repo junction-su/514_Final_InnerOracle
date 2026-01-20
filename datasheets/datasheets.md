@@ -1,0 +1,6 @@
+- Gear Stepper Motor Driver Pack(28BYJ-48) : https://wiki.seeedstudio.com/Gear_Stepper_Motor_Driver_Pack/
+  - ULN200x : https://www.digikey.com/en/htmldatasheets/production/8883/0/0/1/uln200x-a-d1-
+  - CX28BYJ48 : https://files.seeedstudio.com/wiki/Gear-Stepper-Motor-Driver-Pack/res/CX28BYJ48.pdf
+- SSD1306(OLED) : https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf
+- Grove - GSR Sensor (Seeed Studio) : https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Sensor_WiKi.pdf
+- ESP32-C3 : https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf
