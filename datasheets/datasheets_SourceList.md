@@ -1,4 +1,4 @@
-- Gear Stepper Motor Driver Pack(x27.168) : [https://wiki.seeedstudio.com/Gear_Stepper_Motor_Driver_Pack/](https://cdn-shop.adafruit.com/product-files/2424/2424.pdf)
+- Gear Stepper Motor Driver Pack(x27.168) : https://cdn-shop.adafruit.com/product-files/2424/2424.pdf // http://agr.ucoz.lv/files/SP_X27_e_C.pdf
 - SSD1306(OLED) : https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf
 - Grove - GSR Sensor (Seeed Studio) : https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Sensor_WiKi.pdf
 - ESP32-C3 : https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf
