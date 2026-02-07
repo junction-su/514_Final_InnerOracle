@@ -1,0 +1,54 @@
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+System Parameters (defined by hardware),,,,Profiles (usage of each component mode - defined by software and usage),,,,,,,,,,,
+,form the datasheets,,,,,,,,,,,,,,
+,,,,"""off""","""sensing""","""interactive""",,,,,,,,,
+Processor,,,,,,,,,,,,,,,
+Active,248,mW,,0%,5%,5%,,,,,,,,,
+Idle,83,mW,,0%,95%,95%,,,,,,,,,
+Sleep,0,mW,,100%,0%,0%,,,,,,,,,
+,,,,,,,,,,,,,,,
+LED(NeoPixel - WS2812B),,,,,,,,,,,,,,,
+On,66,mW,,0%,0%,20%,,,,,,,,,
+,,,,,,,,,,,,,,,
+Sensor,,,,,,,,,,,,,,,
+On,10,mW,,0%,100%,0%,,,,,,,,,
+Idle,10,mW,,0%,0%,0%,,,,,,,,,
+Off,0,mW,,100%,0%,100%,,,,,,,,,
+,,,,,,,,,,,,,,,
+Motor (X27),,,,,,,,,,,,,,,
+On,192,mW,,0%,0%,5%,,,,,,,,,
+Idle,0,mW,,0%,0%,0%,,,,,,,,,
+Off,0,mW,,100%,100%,95%,,,,,,,,,
+,,,,,,,,,,,,,,,
+Display(SSD1306),,,,,,,,,,,,,,,
+On,66,mW,,0%,0%,100%,,,,,,,,,
+Off (leakage),0,mW,,100%,100%,0%,,,,,,,,,
+,,,,,,,,,,,,,,,
+Radio,,,,,,,,,,,,,,,
+Data Rate,1000000,bps,,0%,0%,0%,,,,,Total power in profile (mw),,,Maximum Time ,
+Standby Power,83,mW,,0%,95%,90%,,,,,"""off""",0.18,mW,10175.0,hours
+TX Power,1106,mW,,0%,5%,0%,,,,,"""sensing""",234.805,mW,7.8,hours
+RX Power,277,mW,,0%,0%,10%,,,,,"""interactive""",281.97,mW,6.5,hours
+,,,,,,,,,,,,,,,
+,,,,22,2,0,hours/day typical usage,,,,Effective Battery Capacity,,,,
+Battery,,,,,,,,,,,,1831.5,mW*h,,
+Capacity,500,mAh,,,,,,,,,,,,,
+Nominal Voltage,4,V,,,,,,,,,Days of Use,3.87,days,,
+Regulator Efficiency,99%,,,,,,,,,,Hours of Use,92.82,hours,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+REFLECTIONS : WHAT DID YOU LEARN FROM ANALYZING YOUR POWER.  TALK ABOUT SOME POTENTIAL TRADEOFFS. ,,,,,,,,,,,,,,,
+"1. How did you determine your ""days of use"" metric?
+
+I determined the metric based on an Intermittent Usage Profile(On-demand use). Because the device does not have to be Always-on, a reasonable assumption is a scenario where the device is utilized by the user for 2 hours, while the device is at a Deep Sleep state for the next 22 hours of the day. The calculation for Days of Use is determined by dividing the effective battery capacity (mWh) by the daily battery usage.
+
+2. What do you think is the optimum size for the battery in your device?
+
+I think that the battery type of 3.7V 500mAh Li-Po battery is the most suitable for our project because, based on my calculation, it can run for around 3.2 to 3.8 days, which allows the user of this wearable device to charge the battery only twice a week. Adding more capacity like 1000mAh will definitely offer longer battery life but at a cost of a bulky and heavy device. 
+
+3. What hardware/software/cost/effort tradeoffs could you make to improve the user experience?
+
+Software Trade-off: I may use ESP-NOW rather than Wi-Fi in order to minimize communication time and power consumption. However, this may demand a much more complex programming task. 
+Hardware Trade-off: I may use E-ink rather than OLED in order to minimize battery consumption, given that E-ink consumes a negligible amount of power from the battery during static operation. However, this will result in a high cost of components and a reduction in refresh rate (responsiveness).",,,,,,,,,,,,,,,
