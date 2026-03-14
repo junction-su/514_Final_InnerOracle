@@ -1,37 +1,37 @@
-# The Inner Oracle: Biometric Fortune Teller
+# 🔮 InnerOracle: Biometric Fortune Teller
 
 ## 1. Project Overview
-**The Inner Oracle** is an interactive fortune-telling machine that combines biometric data with Tarot symbolism. Instead of relying on pure chance, it measures the user's physiological state (skin conductance) to generate a personalized reading. By placing a hand on the sensing orb, the user triggers a mechanical dial that points to a Tarot card, while an OLED screen displays a cryptic message tailored to their inner condition.
+**InnerOracle** is an interactive, tangible interface that translates physiological stress into mystical guidance. Unlike traditional fortune-telling machines that rely on random chance, InnerOracle utilizes **Galvanic Skin Response (GSR)** to measure the user's emotional arousal and provides a personalized Tarot reading through a mechanical dial and an OLED display.
 
 ![Concept Sketch](README_Img/sketch.png) 
 
-## 2. Display Device
-The output consists of a dual-display system: a physical mechanical dial and a digital screen.
+## 2. Technical Complexity & System Architecture
+The system is built with a **Dual-Node Architecture** using two Seeed Studio XIAO ESP32-C3 microcontrollers communicating via the **ESP-NOW** wireless protocol.
 
-* **Components:**
-    * **Stepper Motor:** 28BYJ-48 with ULN2003 Driver (Part #105990072) - *Controls the Pointer (Label #3)*
-    * **OLED Display:** 0.96" I2C OLED (Generic SSD1306) - *Shows the text (Label #4)*
-    * **Tarot Dial Face:** Custom circular board (Label #2)
-* **Functionality:** The stepper motor rotates the pointer to a specific Tarot card based on the sensor input, while the OLED explains the meaning.
+### [Sensing Node]
+* **Microcontroller**: Seeed Studio XIAO ESP32-C3
+* **Sensor**: Grove GSR Sensor with custom Copper Tape Electrodes
+* **Logic**: Implements an **Adaptive Baseline Tracking** algorithm to detect emotional triggers beyond skin resistance fluctuations.
+* **Feedback**: Provides immediate visual feedback via NeoPixel LED (Rainbow effect).
 
-![Display Device Sketch](README_Img/display_detail.png)
+### [Display Node]
+* **Microcontroller**: Seeed Studio XIAO ESP32-C3
+* **Actuator**: **X27.168 Stepper Motor** (Precision Gauge Motor)
+* **Display**: 0.96" I2C SSD1306 OLED
+* **Logic**: Receives real-time stress data and controls the physical needle with custom homing and calibration sequences.
 
+## 3. Data Flow
+`[User's Hand] -> [GSR Sensor] -> [Sensing XIAO] --(ESP-NOW Wireless)--> [Display XIAO] -> [X27 Motor & OLED]`
 
-## 3. Sensing Device
-The input mechanism simulates a "crystal ball" reading using Galvanic Skin Response (GSR).
+## 4. Hardware Fabrication
+* **Custom PCB**: Designed and soldered at GIX Prototyping Labs.
+* **Enclosure**: 2-part 3D printed housing ("The Orb" and "The Dial Box").
+* **Power**: Powered by 3.7V 1000mAh LiPo batteries, optimized for up to 150+ hours of typical usage.
 
-* **Component:** Grove - GSR Sensor (Seeed Studio, Part #101020052)
-* **Functionality:** This sensor measures the electrical conductance of the skin.
-* **Operation (See Label #6 in Sketch):** When the user places their hand on the electrodes embedded in the sensing orb, the ESP32C3 reads the analog signal to detect stress levels.
+## 5. Repository Structure
+* `/Sensing_Node`: Source code for GSR data processing and ESP-NOW transmission.
+* `/Display_Node`: Source code for motor control, OLED UI, and data reception.
 
-![Sensing Device Sketch](README_Img/sensor_detail.png)
-
-
-
-## 4. System Architecture & Data Flow
-The device operates on a closed-loop system where biometric input directly drives physical and digital outputs.
-
-### Data Flow Diagram
-`[User Hand] --> [GSR Sensor] --(Analog Signal)--> [XIAO ESP32C3] --(I2C/GPIO)--> [OLED & Motor]`
-
-![System Diagram](README_Img/system_diagram_1.png)
+## 6. Budget Summary
+* Total Project Cost: **$66.95**
+* Key Components: GSR Sensor ($32.99), 1000mAh Batteries ($16.98), XIAO ESP32C3 ($10.99).
